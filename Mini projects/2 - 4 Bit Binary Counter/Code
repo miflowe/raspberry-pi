@@ -1,0 +1,121 @@
+from machine import Pin
+from time import sleep
+
+counter1 = Pin(13,Pin.OUT)
+counter2 = Pin(12,Pin.OUT)
+counter3 = Pin(11,Pin.OUT)
+counter4 = Pin(10,Pin.OUT)
+
+while True:
+    
+    counter1.value(0)
+    counter2.value(0)
+    counter3.value(0)
+    counter4.value(0)
+    
+    sleep(1)
+    
+    counter1.value(1)
+    counter2.value(0)
+    counter3.value(0)
+    counter4.value(0)
+    
+    sleep(1)
+    
+    counter1.value(0)
+    counter2.value(1)
+    counter3.value(0)
+    counter4.value(0)
+    
+    sleep(1)
+    
+    counter1.value(1)
+    counter2.value(1)
+    counter3.value(0)
+    counter4.value(0)
+    
+    sleep(1)
+    
+    counter1.value(0)
+    counter2.value(0)
+    counter3.value(1)
+    counter4.value(0)
+    
+    sleep(1)
+    
+    counter1.value(1)
+    counter2.value(0)
+    counter3.value(1)
+    counter4.value(0)
+    
+    sleep(1)
+    
+    counter1.value(0)
+    counter2.value(1)
+    counter3.value(1)
+    counter4.value(0)
+    
+    sleep(1)
+    
+    counter1.value(1)
+    counter2.value(1)
+    counter3.value(1)
+    counter4.value(0)
+    
+    sleep(1)
+    
+    counter1.value(0)
+    counter2.value(0)
+    counter3.value(0)
+    counter4.value(1)
+
+    sleep(1)
+    
+    counter1.value(1)
+    counter2.value(0)
+    counter3.value(0)
+    counter4.value(1)
+    
+    sleep(1)
+    
+    counter1.value(0)
+    counter2.value(1)
+    counter3.value(0)
+    counter4.value(1)
+    
+    sleep(1)
+    
+    counter1.value(1)
+    counter2.value(1)
+    counter3.value(0)
+    counter4.value(1)
+    
+    sleep(1)
+    
+    counter1.value(0)
+    counter2.value(0)
+    counter3.value(1)
+    counter4.value(1)
+    
+    sleep(1)
+    
+    counter1.value(1)
+    counter2.value(0)
+    counter3.value(1)
+    counter4.value(1)
+    
+    sleep(1)
+    
+    counter1.value(0)
+    counter2.value(1)
+    counter3.value(1)
+    counter4.value(1)
+    
+    sleep(1)
+    
+    counter1.value(1)
+    counter2.value(1)
+    counter3.value(1)
+    counter4.value(1)
+    
+    sleep (1)

@@ -8,5 +8,8 @@ while True:
     potVal = myPot.read_u16()
     # reads voltage in 16 bit, then we convert it to a 0-3.3 scale using linear interpolation
     voltage=(3.3/65106)*potVal-((430*3.3)/65106)
+    #next two commented lines are just converting to a 0-100 scale for fun
+    #voltage2 = (100/3.3)*voltage
+    #print(voltage2)
     print(voltage)
     sleep(.5)

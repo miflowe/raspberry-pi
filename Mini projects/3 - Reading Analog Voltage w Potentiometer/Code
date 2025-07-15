@@ -1,0 +1,12 @@
+import machine
+from time import sleep
+
+potPin=28
+myPot=machine.ADC(potPin)
+
+while True:
+    potVal = myPot.read_u16()
+    # reads voltage in 16 bit, then we convert it to a 0-3.3 scale using linear interpolation
+    voltage=(3.3/65106)*potVal-((430*3.3)/65106)
+    print(voltage)
+    sleep(.5)

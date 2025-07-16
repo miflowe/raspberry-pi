@@ -1,5 +1,6 @@
-# raspberry-pi
+# Mini Raspberry Pi Projects
 
-A lot of mini learning projects I've done to gain more experience & learn more about hardware & software. 
+A growing collection of hands-on projects built with the Raspberry Pi Pico W and a variety of electronic components.  
+Each mini project explores a different hardware or software concept to help me learn, experiment, and document my progress in embedded systems.
 
-These are all done with the use of the Raspberry Pi Pico W and various other electrical components
+Browse the folders to see code and demo videos for each project.

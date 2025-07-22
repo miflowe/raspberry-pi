@@ -1,0 +1,41 @@
+import machine
+from machine import Pin
+from time import sleep
+
+potPin = 28
+myPot = machine.ADC(potPin)
+
+redLED = Pin(15, Pin.OUT)
+yellowLED = Pin(14, Pin.OUT)
+greenLED = Pin(13, Pin.OUT)
+
+while True:
+    potVal = myPot.read_u16()
+    # reads voltage in 16 bit, then we convert it to a 0-100 scale using linear interpolation
+    voltage = ((3.3/65106)*potVal-((430*3.3)/65106))*(100/3.3)
+    print(voltage)
+    sleep(.5)
+    
+    
+    if voltage < 0 or voltage > 100:
+        print('all lights off!')
+        redLED.value(0)
+        yellowLED.value(0)
+        greenLED.value(0)
+        
+    if voltage >= 0 and voltage <= 79:
+        print('green light on! ')
+        redLED.value(0)
+        yellowLED.value(0)
+        greenLED.value(1)
+    if voltage >= 80 and voltage <= 94:
+        print('yellow light on! ')
+        redLED.value(0)
+        yellowLED.value(1)
+        greenLED.value(0)
+        
+    if voltage >= 95 and voltage < 100:
+        print('red light on!')
+        redLED.value(1)
+        yellowLED.value(0)
+        greenLED.value(0)

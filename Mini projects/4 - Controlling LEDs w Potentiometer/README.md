@@ -12,3 +12,4 @@ Outside these values, all the LEDs are off.
 
 Project done on 2025/07/23
 
+![demo-video-2](https://github.com/user-attachments/assets/59c6ae1e-5b33-4355-882b-a135385a4cf4)

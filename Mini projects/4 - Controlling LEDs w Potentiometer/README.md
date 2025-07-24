@@ -8,5 +8,7 @@ From 80-100, the red LED turns on.
 
 Outside these values, all the LEDs are off.
 
+
+
 Project done on 2025/07/23
 

@@ -16,26 +16,27 @@ while True:
     print(voltage)
     sleep(.5)
     
-    
     if voltage < 0 or voltage > 100:
         print('all lights off!')
         redLED.value(0)
         yellowLED.value(0)
         greenLED.value(0)
         
-    if voltage >= 0 and voltage <= 79:
+    elif voltage <= 50:
         print('green light on! ')
         redLED.value(0)
         yellowLED.value(0)
         greenLED.value(1)
-    if voltage >= 80 and voltage <= 94:
+        
+    elif voltage <= 80:
         print('yellow light on! ')
         redLED.value(0)
         yellowLED.value(1)
         greenLED.value(0)
         
-    if voltage >= 95 and voltage < 100:
-        print('red light on!')
+    else:  # voltage > 80
+        print('red light on! ')
         redLED.value(1)
         yellowLED.value(0)
         greenLED.value(0)
+

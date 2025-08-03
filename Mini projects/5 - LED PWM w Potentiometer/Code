@@ -1,0 +1,24 @@
+import machine
+from machine import Pin, PWM
+from time import sleep
+
+potPin = 28
+myPot = machine.ADC(potPin)
+
+redLED = PWM(Pin(15))
+redLED.freq(1000)
+redLED.duty_u16(0)
+yellowLED = PWM(Pin(14))
+yellowLED.freq(1000)
+yellowLED.duty_u16(0)
+greenLED = PWM(Pin(13))
+greenLED.freq(1000)
+greenLED.duty_u16(0)
+
+while True:
+    potVal = myPot.read_u16()
+    print(potVal)
+    redLED.duty_u16(int(potVal))
+    yellowLED.duty_u16(int(potVal))
+    greenLED.duty_u16(int(potVal))
+    sleep(.1)
